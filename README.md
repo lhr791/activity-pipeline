@@ -110,6 +110,32 @@ python bonus_rules.py --bonus-rules
 
 ---
 
+## 🖥️ 前端仪表盘（活动审核 / 管理）
+
+### 首次安装
+需要先装 **Node.js 18+**：https://nodejs.org/
+
+```powershell
+cd web
+npm install
+```
+
+### 启动
+```powershell
+cd web
+npm run dev
+```
+
+浏览器打开 **http://localhost:3000**，可以：
+- 📊 查看所有活动数据（按交易所筛选）
+- ✅ 人工审核活动（确认/修改/删除）
+- 🔀 合并重复活动
+- 📝 查看 TG 原始消息来源
+
+> 数据存在 Supabase 云端，多台电脑用同一个 `.env` 配置就能看到相同数据
+
+---
+
 ## 📁 文件说明
 
 | 文件 | 用途 |
@@ -121,8 +147,10 @@ python bonus_rules.py --bonus-rules
 | `generate_word.py` | 生成 Word 报告 |
 | `backfill.py` | TG 历史消息回填 |
 | `utils.py` | 公共工具 |
+| `web/` | 前端仪表盘（Next.js） |
 | `.env` | API Key 配置（**不要泄露**） |
 | `output/` | 报告输出目录 |
 
 ## 💰 费用
 全流程一次 ≈ **$0.5~1**（主要是 summarizer 用 GPT-5.4）
+
