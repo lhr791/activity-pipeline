@@ -195,6 +195,26 @@ npm run dev
 
 ---
 
+## 🤖 AI 助手（Antigravity Skill）
+
+如果你用的是 Antigravity AI 编程助手，本项目自带 skill 文件，AI 可以自动理解整个 pipeline。
+
+### 使用方式
+- 输入 `/activity-pipeline` 即可让 AI 按标准流程执行
+- AI 会自动识别 `.agents/skills/tg-activity-pipeline/` 下的步骤文档
+
+### Skill 步骤文档
+| 文件 | 内容 |
+|------|------|
+| `SKILL.md` | 总览：完整 pipeline 流程说明 |
+| `01-tg-reading.md` | TG 数据采集 |
+| `02-data-cleaning.md` | AI 整合去重 |
+| `03-activity-dashboard.md` | 前端仪表盘使用 |
+| `04-google-sheets-sync.md` | Google Sheets 同步 |
+| `05-enrich-events.md` | 活动页面抓取 + 赠金规则 |
+
+---
+
 ## 📁 文件说明
 
 | 文件 | 用途 |
