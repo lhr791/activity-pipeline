@@ -118,6 +118,19 @@ TG_API_HASH=abc123...
 2. 输入 Telegram 收到的验证码
 3. 登录成功后自动生成 `tg_session.session` 文件，以后不再需要
 
+### 第 7 步：加入 Telegram 频道
+
+新账号需要先加入以下 6 个频道，否则无法读取消息：
+
+| 频道 | 加群链接 |
+|------|---------|
+| Coinscalper Channel | https://t.me/coinscalper_1199 |
+| 증정금 No1 레드터틀 채널 | https://t.me/redturtle7777 |
+| Dalchuni Crypto Events | https://t.me/dalchuni2 |
+| Global Loha(Crypto Event) | https://t.me/lowriskcoin |
+| Redturtle_Global_Events | https://t.me/Global_redturtle |
+| Global Exchange Event Summary | https://t.me/global_exchange_event |
+
 ---
 
 ## 📋 日常使用
