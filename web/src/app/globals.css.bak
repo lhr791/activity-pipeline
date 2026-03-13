@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── Value diff glow animations (4 categories) ── */
+
+/* 入金 deposit: cyan */
+@keyframes glow-deposit {
+  0%, 100% { box-shadow: 0 0 4px rgba(34, 211, 238, 0.25), 0 0 8px rgba(34, 211, 238, 0.08); }
+  50% { box-shadow: 0 0 10px rgba(34, 211, 238, 0.55), 0 0 24px rgba(34, 211, 238, 0.2); }
+}
+.vdiff-deposit {
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  color: #67e8f9;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+  animation: glow-deposit 2.2s ease-in-out infinite;
+}
+
+/* 交易量 volume: violet */
+@keyframes glow-volume {
+  0%, 100% { box-shadow: 0 0 4px rgba(167, 139, 250, 0.25), 0 0 8px rgba(167, 139, 250, 0.08); }
+  50% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.55), 0 0 24px rgba(167, 139, 250, 0.2); }
+}
+.vdiff-volume {
+  background: rgba(167, 139, 250, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  color: #c4b5fd;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+  animation: glow-volume 2.2s ease-in-out infinite;
+}
+
+/* 赠金 bonus: emerald */
+@keyframes glow-bonus {
+  0%, 100% { box-shadow: 0 0 4px rgba(52, 211, 153, 0.25), 0 0 8px rgba(52, 211, 153, 0.08); }
+  50% { box-shadow: 0 0 10px rgba(52, 211, 153, 0.55), 0 0 24px rgba(52, 211, 153, 0.2); }
+}
+.vdiff-bonus {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: #6ee7b7;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+  animation: glow-bonus 2.2s ease-in-out infinite;
+}
+
+/* 其他 other: amber */
+@keyframes glow-other {
+  0%, 100% { box-shadow: 0 0 4px rgba(251, 191, 36, 0.25), 0 0 8px rgba(251, 191, 36, 0.08); }
+  50% { box-shadow: 0 0 10px rgba(251, 191, 36, 0.55), 0 0 24px rgba(251, 191, 36, 0.2); }
+}
+.vdiff-other {
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  color: #fbbf24;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+  animation: glow-other 2.2s ease-in-out infinite;
+}

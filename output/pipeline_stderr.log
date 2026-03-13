@@ -1,0 +1,14 @@
+2026-03-09 04:10:29 [INFO] tg-summarizer: ==================================================
+2026-03-09 04:10:29 [INFO] tg-summarizer: Step 2: 导出原始聊天记录...
+2026-03-09 04:10:29 [INFO] tg-summarizer: ==================================================
+2026-03-09 04:10:30 [INFO] httpx: HTTP Request: GET https://lunwwthueinnokzpwkig.supabase.co/rest/v1/raw_messages?select=chat_id%2Cmessage_id%2Ctext%2Csent_at&order=sent_at.desc&limit=1000 "HTTP/2 200 OK"
+2026-03-09 04:10:30 [INFO] tg-summarizer: 原始聊天记录: C:\Users\xtt\Desktop\ai 施工\活动整理\output\TG原始聊天记录_20260309_0410.docx
+2026-03-09 04:10:30 [INFO] tg-summarizer: ==================================================
+2026-03-09 04:10:30 [INFO] tg-summarizer: Step 3: AI 整合活动信息...
+2026-03-09 04:10:30 [INFO] tg-summarizer: ==================================================
+2026-03-09 04:10:31 [INFO] httpx: HTTP Request: GET https://lunwwthueinnokzpwkig.supabase.co/rest/v1/raw_messages?select=%2A&is_summarized=eq.False&order=sent_at.asc "HTTP/2 200 OK"
+2026-03-09 04:10:31 [INFO] tg-summarizer: Processing 548 messages across channels...
+2026-03-09 04:10:31 [INFO] tg-summarizer: Split into 7 batches
+2026-03-09 04:10:31 [INFO] httpx: HTTP Request: GET https://lunwwthueinnokzpwkig.supabase.co/rest/v1/summaries?select=summary%2Ctopics&order=created_at.desc&limit=1 "HTTP/2 200 OK"
+2026-03-09 04:10:31 [INFO] tg-summarizer: Processing batch 1/7...
+2026-03-09 04:10:32 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"

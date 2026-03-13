@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Alibaba PuHuiTi 3.0", "Microsoft YaHei", sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Alibaba PuHuiTi 3.0", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ══════════════════════════════════════════════════
+   DARK MODE tag highlights (default)
+   ══════════════════════════════════════════════════ */
+
+.vdiff-deposit {
+  background: rgba(34, 211, 238, 0.10);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: #a5f3fc;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+}
+
+.vdiff-volume {
+  background: rgba(167, 139, 250, 0.10);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: #ddd6fe;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+}
+
+.vdiff-bonus {
+  background: rgba(52, 211, 153, 0.10);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #a7f3d0;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+}
+
+.vdiff-other {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.20);
+  color: #fde68a;
+  border-radius: 4px; padding: 1px 5px; font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════
+   LIGHT MODE overrides (when html has no .dark class)
+   ══════════════════════════════════════════════════ */
+
+html:not(.dark) body {
+  background: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Main page background */
+html:not(.dark) [class*="bg-\[#0A0A0B\]"],
+html:not(.dark) [class*="bg-\[#0a0a0b\]"] {
+  background-color: #f8fafc !important;
+}
+
+html:not(.dark) [class*="bg-black"] {
+  background-color: #f8fafc !important;
+}
+
+/* Card backgrounds */
+html:not(.dark) [class*="bg-white\/\[0.02\]"],
+html:not(.dark) [class*="bg-white\/\[0.03\]"],
+html:not(.dark) [class*="bg-white\/\[0.04\]"] {
+  background-color: #f1f5f9 !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04) !important;
+}
+
+html:not(.dark) [class*="bg-white\/5"] {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) [class*="bg-white\/10"] {
+  background-color: #e2e8f0 !important;
+}
+
+/* Text colors */
+html:not(.dark) [class*="text-white"] {
+  color: #000000 !important;
+}
+
+html:not(.dark) [class*="text-slate-100"],
+html:not(.dark) [class*="text-slate-200"] {
+  color: #000000 !important;
+}
+
+html:not(.dark) [class*="text-slate-300"] {
+  color: #0f172a !important;
+}
+
+html:not(.dark) [class*="text-slate-400"] {
+  color: #1e293b !important;
+}
+
+html:not(.dark) [class*="text-slate-500"] {
+  color: #334155 !important;
+}
+
+/* Borders */
+html:not(.dark) [class*="border-white\/5"],
+html:not(.dark) [class*="border-white\/10"] {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) [class*="border-white\/20"] {
+  border-color: #cbd5e1 !important;
+}
+
+/* Badge colors for light mode - 色弱友好，极深色 */
+html:not(.dark) [class*="text-emerald"] { color: #064e3b !important; font-weight: 600 !important; }
+html:not(.dark) [class*="text-amber"] { color: #78350f !important; font-weight: 600 !important; }
+html:not(.dark) [class*="text-rose"] { color: #881337 !important; font-weight: 600 !important; }
+html:not(.dark) [class*="text-indigo"] { color: #312e81 !important; font-weight: 600 !important; }
+
+/* Rose alert box background - 高对比 */
+html:not(.dark) [class*="bg-rose-500"] {
+  background-color: #ffe4e6 !important;
+  border-color: #fb7185 !important;
+}
+
+/* Indigo badges */
+html:not(.dark) [class*="bg-indigo-500\/20"] { background-color: #eef2ff !important; }
+html:not(.dark) [class*="border-indigo-500"] { border-color: #a5b4fc !important; }
+
+/* Emerald/amber/rose badges */
+html:not(.dark) [class*="bg-emerald-500\/10"] { background-color: #ecfdf5 !important; }
+html:not(.dark) [class*="bg-emerald-500\/20"] { background-color: #d1fae5 !important; }
+html:not(.dark) [class*="bg-amber-500\/10"] { background-color: #fffbeb !important; }
+html:not(.dark) [class*="bg-amber-500\/20"] { background-color: #fef3c7 !important; }
+html:not(.dark) [class*="bg-rose-500\/10"] { background-color: #fff1f2 !important; }
+html:not(.dark) [class*="bg-rose-500\/20"] { background-color: #ffe4e6 !important; }
+
+/* Drawer overlay */
+html:not(.dark) [class*="bg-black\/80"] {
+  background-color: rgba(0,0,0,0.3) !important;
+}
+
+/* Tag highlights for light mode */
+html:not(.dark) .vdiff-deposit {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+html:not(.dark) .vdiff-volume {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+  color: #6d28d9;
+}
+
+html:not(.dark) .vdiff-bonus {
+  background: #d1fae5;
+  border-color: #6ee7b7;
+  color: #047857;
+}
+
+html:not(.dark) .vdiff-other {
+  background: #fef3c7;
+  border-color: #fcd34d;
+  color: #92400e;
+}
+
+/* Stat section shadow */
+html:not(.dark) [class*="shadow-\[0_0_30px"] {
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Divider lines */
+html:not(.dark) [class*="bg-white\/10"]:not(button):not(a) {
+  background-color: #e2e8f0 !important;
+}
+
+/* 审核模式浮动栏 + 合并对话框 light mode */
+html:not(.dark) [class*="bg-\[#111113\]"] {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) [class*="border-amber-500\/30"] {
+  border-color: #fbbf24 !important;
+}
+
+html:not(.dark) [class*="text-amber-300"] {
+  color: #92400e !important;
+}
